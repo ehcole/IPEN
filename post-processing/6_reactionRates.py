@@ -4,6 +4,8 @@ import sys
 import pandas as pd
 import math
 
+#TODO: define path to top level git dir
+pathToTopLevel = '.'
 
 h5 = h5py.File(sys.argv[1], 'r')
 modelData4D = h5["STATE_0001/pin_powers"]
@@ -34,7 +36,7 @@ for i in range(modelData.shape[0]):
             modelData[i][j] += modelData4D[i][j][k][0] / modelData4D.shape[2]
 
 #TODO: Replace with path to .csv containing reactionRate data
-expDataDF = pd.read_csv("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/expData/reactionRates.csv")
+expDataDF = pd.read_csv(pathToTopLevel + "/post-processing/experimental_data/reactionRates.csv")
 expData = dict()
 for col in expDataDF.columns[1:]:
     sum = 0
