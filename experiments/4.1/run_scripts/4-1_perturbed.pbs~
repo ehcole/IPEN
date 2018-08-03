@@ -1,0 +1,35 @@
+#!/bin/sh
+#### PBS preamble
+#PBS -N 4-1_perturbed
+
+#PBS -M ehcole@umich.edu
+#PBS -m a
+
+#PBS -l nodes=5:ppn=12,pmem=2000m,walltime=06:00:00 
+#PBS -j oe
+#PBS -V
+
+#PBS -A wrm_fluxoe
+#PBS -q fluxoe
+#PBS -l qos=flux
+#### End PBS preamble
+
+if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
+
+react2xml.pl 4-1-1.inp ../../../../outputs/4-1_perturbed/4-1-1.xml
+mpirun -np 56 MPACT.exe ../../../../4-1_perturbed/4-1-1.xml
+
+react2xml.pl 4-1-2.inp ../../../../outputs/4-1_perturbed/4-1-2.xml
+mpirun -np 56 MPACT.exe ../../../../outputs/4-1_perturbed/4-1-2.xml
+
+react2xml.pl 4-1-3.inp ../../../../outputs/4-1_perturbed/4-1-3.xml
+mpirun -np 56 MPACT.exe ../../../../outputs/4-1_perturbed/4-1-3.xml
+
+react2xml.pl 4-1-4.inp ../../../../outputs/4-1_perturbed/4-1-4.xml
+mpirun -np 56 MPACT.exe ../../../../outputs/4-1_perturbed/4-1-4.xml
+
+react2xml.pl 4-1-5.inp ../../../../outputs/4-1_perturbed/4-1-5.xml
+mpirun -np 56 MPACT.exe ../../../../outputs/4-1_perturbed/4-1-5.xml
+
+react2xml.pl 4-1-6.inp ../../../../outputs/4-1_perturbed/4-1-6.xml
+mpirun -np 56 MPACT.exe ../../../../outputs/4-1_perturbed/4-1-6.xml

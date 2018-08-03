@@ -1,0 +1,20 @@
+#!/bin/sh
+#### PBS preamble
+#PBS -N 4-2_perturbed
+
+#PBS -M ehcole@umich.edu
+#PBS -m a
+
+#PBS -l nodes=5:ppn=12,pmem=2000m,walltime=01:00:00 
+#PBS -j oe
+#PBS -V
+
+#PBS -A wrm_fluxoe
+#PBS -q fluxoe
+#PBS -l qos=flux
+#### End PBS preamble
+
+if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
+
+react2xml.pl 4-2_perturbed.inp ../../../outputs/4-2_perturbed.xml
+mpirun -np 56 MPACT.exe ../../../outputs/4-2_perturbed.xml

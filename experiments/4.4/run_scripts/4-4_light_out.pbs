@@ -1,0 +1,28 @@
+#!/bin/sh
+#### PBS preamble
+#PBS -N 4-4_light_out
+
+#PBS -M ehcole@umich.edu
+#PBS -m a
+
+#PBS -l nodes=1:ppn=16,pmem=2000m,walltime=03:00:00 
+#PBS -j oe
+#PBS -V
+
+#PBS -A wrm_fluxoe
+#PBS -q fluxoe
+#PBS -l qos=flux
+#### End PBS preamble
+
+if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
+
+react2xml.pl IPEN-026-1.inp ../../../../../../outputs/2D/4-4_light/out/IPEN-026-1.xml
+mpirun -np 16 MPACT.exe ../../../../../../outputs/2D/4-4_light/out/IPEN-026-1.xml
+
+react2xml.pl IPEN-026-2.inp ../../../../../../outputs/2D/4-4_light/out/IPEN-026-2.xml
+mpirun -np 16 MPACT.exe ../../../../../../outputs/2D/4-4_light/out/IPEN-026-2.xml
+
+react2xml.pl IPEN-026-3.inp ../../../../../../outputs/2D/4-4_light/out/IPEN-026-3.xml
+mpirun -np 16 MPACT.exe ../../../../../../outputs/2D/4-4_light/out/IPEN-026-3.xml
+
+
