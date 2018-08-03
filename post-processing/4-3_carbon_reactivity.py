@@ -1,14 +1,15 @@
 import h5py
 import numpy as np
-#TO DO: Replace path to h5 files
+#TO DO: define path to top level git directory
+pathToTopLevel = '.'
 #f0 is the case with no plates (-7.h5)
-f0 = h5py.File("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/version3/IPEN-019/4-3-0.h5", 'r')
+f0 = h5py.File(pathToTopLevel + "/IPEN/experiments/4.1/outputs/4-3_carbon/4-3-0.h5", 'r')
 expData = np.array([154.91, 111.68, -4.14, -67.01, -249.83, -348.68, -344.79])
 results = np.zeros(expData.shape[0])
 keff0 = f0["STATE_0001/keff"][()]
 for i in range(1, 8):
     try:
-        f = h5py.File("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/version3/IPEN-019/4-3-" + str(i) + ".h5", 'r')
+        f = h5py.File(pathToTopLevel + "/IPEN/experiments/4.1/outputs/4-3_carbon/4-3-" + str(i) + ".h5", 'r')
     except:
         exit(0)
     else:
