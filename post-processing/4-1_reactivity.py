@@ -12,8 +12,8 @@ for i in range(1, 7):
         lastState = 4
     else:
         lastState = 5
-    h5 = h5py.File(pathToTopLevel + "/IPEN/experiments/4.1/outputs/critical/4-1-" + str(i) + ".h5", 'r')
-    h5p = h5py.File(pathToTopLevel + "/IPEN/experiments/4.1/outputs/critical/4-1-/4-1-" + str(i) + ".h5", 'r')
+    h5 = h5py.File(pathToTopLevel + "/experiments/4.1/outputs/critical/4-1-" + str(i) + ".h5", 'r')
+    h5p = h5py.File(pathToTopLevel + "/experiments/4.1/outputs/critical/4-1-/4-1-" + str(i) + ".h5", 'r')
     for j in range(1, lastState + 1):
         state = "STATE_000" + str(j)
         keff = h5[state]["keff"][()]
