@@ -2,7 +2,7 @@ import h5py
 import numpy as np
 
 #TODO: define path to top level git directory
-pathToTopLevel = '.'
+pathToTopLevel = "."
 total = 0
 counter = 0
 expData = np.array([94.93, 108.34, 94.24, 113.89, 102.78, 97.83, 101.82, 95.10, 93.76, 95.55, 96.54, 97.26, 96.85, 90.13, 98.93, 93.43, 99.63, 84.76, 79.50, 85.50, 96.39, 91.90, 95.52, 90.79, 85.44, 64.30, 608.86])
