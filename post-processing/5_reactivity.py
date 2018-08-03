@@ -3,7 +3,7 @@ import numpy as np
 
 #TODO: define path to top level git dir
 pathToTopLevel = '.'
-f = h5py.File(pathToTopLevel + "/IPEN/experiments/5/outputs/5.h5", 'r')
+f = h5py.File(pathToTopLevel + "/experiments/5/outputs/5.h5", 'r')
 oldKeff = f["STATE_0001/keff"][()]
 results = np.zeros(13)
 expData = np.array([-0.5692367257, -0.4353073932, -0.6530200078, -0.5022676959, -0.5022878327, -0.5859966029, -0.5859966029])

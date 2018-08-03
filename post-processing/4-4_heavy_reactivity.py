@@ -2,8 +2,8 @@ import h5py
 import numpy as np
 #TODO: define path to top level git dir
 pathToTopLevel = '.'
-f = h5py.File(pathToTopLevel + "/IPEN/experiments/4.4/outputs/3D/4-4_heavy_critical.h5", 'r')
-p = h5py.File(pathToTopLevel + "/IPEN/experiments/4.4/outputs/3D/4-4_heavy_perturbed.h5", 'r')
+f = h5py.File(pathToTopLevel + "/experiments/4.4/outputs/3D/4-4_heavy_critical.h5", 'r')
+p = h5py.File(pathToTopLevel + "/experiments/4.4/outputs/3D/4-4_heavy_perturbed.h5", 'r')
 expData = np.array([97.25, 95.45, 97.01, 90.31, 94.86, 90.70, 98.61, 95.63, 93.45, 96.13, 96.01, 96.07, 94.03, 93.70, 95.91, 98.78, 101.23, 101.70, 94.23, 104.45, 109.00, 96.55, 107.34, 102.11, 103.05, 122.46, 114.64, 107.66, 99.01])
 results = np.zeros(expData.shape[0])
 for  i in range(1, 30):

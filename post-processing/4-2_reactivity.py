@@ -3,8 +3,8 @@ import numpy as np
 import sys
 #TODO: define path to top level git dir
 pathToTopLevel = '.'
-p = h5py.File(pathToTopLevel + "/IPEN/experiments/4.2/outputs/4-2_perturbed.h5", 'r')
-f = h5py.File(pathToTopLevel + "/IPEN/experiments/4.1/outputs/4-2_critical.h5", 'r')
+p = h5py.File(pathToTopLevel + "/experiments/4.2/outputs/4-2_perturbed.h5", 'r')
+f = h5py.File(pathToTopLevel + "/experiments/4.1/outputs/4-2_critical.h5", 'r')
 expData = np.array([2438.05, 2311.40, 2195.85, 1975.38, 1449.33, 222.16])
 results = np.zeros(expData.shape)
 boronConc = np.array([0.082, 6.067, 11.028, 21.98, 43.23, 95.742])
