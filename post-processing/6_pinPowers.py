@@ -6,9 +6,10 @@ import sys
 
 '''this code analyzes pin power data from the IPEN experiments. it is designed to be run for either a 2D or 3D
 model of a core with one assembly. Takes h5 file as argument.'''
-#TODO: replace with path to csv containing pin power data
+#TODO: define path to top level git dir
+pathToTopLevel = '.'
 #load data
-expData = np.genfromtxt("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/expData/pinPowers.csv", delimiter=',')
+expData = np.genfromtxt(pathToTopLevel + "/post-processing/experimental_data/pinPowers.csv", delimiter=',')
 h5 = h5py.File(sys.argv[1], 'r')
 modelData4D = h5["STATE_0001/pin_powers"]
 modelData = np.zeros([modelData4D.shape[0], modelData4D.shape[1]])
