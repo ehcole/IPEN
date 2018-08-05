@@ -10,7 +10,7 @@ results = np.zeros(expData.shape[0])
 keff0 = f0["STATE_0001/keff"][()]
 for i in range(1, 8):
     try:
-        f = h5py.File(pathToTopLevel + "/experiments/4.1/outputs/4-3_carbon/4-3-" + str(i) + ".h5", 'r')
+        f = h5py.File(pathToTopLevel + "/experiments/4.3/outputs/4-3_carbon/4-3-" + str(i) + ".h5", 'r')
     except:
         exit(0)
     else:
