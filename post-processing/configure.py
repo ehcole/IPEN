@@ -24,7 +24,7 @@ os.system("mv " + path + "/experimental_data " + path[:-16])
 
 for line in fileinput.input(os.listdir(path), inplace = 1):
 
-    print(line.replace("\'.\'", path[:-16]))
+    print(line.replace("\'.\'", "'" + path[:-16] + "'"))
 
 
 
