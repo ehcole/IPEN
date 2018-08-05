@@ -1,3 +1,4 @@
+!all data from same source as in critical section (../4-1_critical/4-1-*inp)
 [CORE]
   include materials-2.ini
   size 4
