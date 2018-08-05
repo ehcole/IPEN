@@ -8,5 +8,5 @@ Experiment 4.4: Reflector box reactivity experiment, including both heavy water 
 
 Experiment 5: temperature reactivity coefficient experiment
 
-Experiment 6: kinetics experiment, including pin power and reactivity rate experiments. Referred to as the "base configuration"
+Experiment 6: kinetics experiment, including pin power and reactivity rate experiments. Referred to as the "base model"
 
