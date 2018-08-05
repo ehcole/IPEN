@@ -1,3 +1,4 @@
+!all data from same source as experiment 6 experiment control rod positions and temperature (pg 188)
 [CORE]
   include materials-2.ini
   size 4
@@ -351,8 +352,8 @@
        C21 1.67
        C22 80.3
 
-
-[STATE] !section 2 & 3
+!from pg 188
+[STATE] 
  sym   full
  power 100.0
  flow  100.0

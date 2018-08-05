@@ -1,3 +1,4 @@
+!all data from same source as carbon steel experiment except control rod positions (pg 63)
 [CORE]
   include materials-3.ini
   size 6
@@ -445,7 +446,7 @@
        C21 1.67
        C22 80.3
 
-
+!data from pg 63)
 [STATE] 
  sym   full
  power 100.0

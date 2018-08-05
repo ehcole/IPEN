@@ -1,9 +1,10 @@
+!data from same sources as 3D critical case
 [CORE]
   include materials-1.ini
   size 3
   apitch 42.0
   height 1.0
-  rated 0.000004 1
+  rated 0.000001 1
 
   !lower_plate GP 2.2 0.99
 

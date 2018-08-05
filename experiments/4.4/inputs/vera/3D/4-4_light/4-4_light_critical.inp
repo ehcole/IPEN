@@ -1,3 +1,4 @@
+!data from same source as heavy reflectory experiment (../4-4_heavy/4-4_heavy_critical.inp)
 [CORE]
   include materials-3.ini
   size 6

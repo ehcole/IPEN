@@ -1,12 +1,12 @@
 [CORE]
   include materials-1.ini
   size 3
-  apitch 42.0
+  apitch 42.0 !npin * ppitch (pg 305)
   height 80.3
-  rated 0.000004 1
-  lower_plate GP 2.2 0.99
-
-  lower_ref H2O 30.0 0.5
+  rated 0.000004 1 !pg 86
+  lower_plate GP 2.2 0.99 !pg 307
+ 
+  lower_ref H2O 30.0 0.5 !pg 307
 
   assm_map
 	A1
@@ -178,7 +178,6 @@ axial A1   0.00
 [CONTROL]
  title "control rods"
  npin 28
-! stroke 80.3 8030
  stroke 80.3 10000
 
  cell 1 0.49037 / CDG !bottom of rod is same material as cladding--table 3.6-1 (pg 306)
@@ -248,6 +247,7 @@ axial 1 0.0
       C1 1.67
       C2 80.3
 
+!data from pg 109
 [STATE]
  sym   full
  boron 0
@@ -255,7 +255,6 @@ axial 1 0.0
  flow  100.0
  tinlet 20 C
  tfuel 600 K
-! rodbank 1 3972
  rodbank 1 5888
  modden 1
  edit fsr_flux_2g fsr_flux_power

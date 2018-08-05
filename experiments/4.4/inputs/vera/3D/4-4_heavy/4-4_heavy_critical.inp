@@ -3,8 +3,8 @@
   size 6
   apitch 21.0
   height 80.3
-  rated 0.000001 1
-  lower_plate GP 2.2 0.99
+  rated 0.000001 1 !pg 48
+  lower_plate GP 2.2 0.99 !pg 307
 
   lower_ref H2O 30.0 0.5
 
@@ -307,7 +307,7 @@
  WW WW WW WW WW WW WW WW WW WW WW WW WW WW 
 
 
-!cells. data from figure 3.6-2 pg 304
+!cells. data from figure 3.6-2 pg 288
 !fuel rod
  cell F1	0.4235 0.42873 0.49037 / AMA air CDG !alumina section of fuel rod. 	 
  cell F2	0.42447 0.42873 0.49037 / UO2 air CDG !UO2 section of fuel rod
@@ -374,7 +374,6 @@
 [CONTROL]
  title "control rods"
  npin 14
- !stroke 80.3 8030
  stroke 80.3 10000
 
  cell 1 0.49037 / CDG !bottom of rod is same material as cladding--table 3.6-1 (pg 306)
@@ -453,7 +452,7 @@
        C22 80.3
 
 
-
+!data from pg 70
 [STATE] !section 1
  sym   full
  power 100.0

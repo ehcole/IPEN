@@ -1,10 +1,10 @@
 [CORE]
   include materials-2.ini
   size 4
-  apitch 21.0
+  apitch 21.0 !ppitch * npitch / 2 (pg 305)
   height 80.3
   rated 0.000001 1
-  lower_plate GP 2.2 0.99
+  lower_plate GP 2.2 0.99 !pg 307
 
   lower_ref H2O 30.0 0.5
   assm_map
@@ -243,7 +243,7 @@
 !water
  cell WW	0.6				  / H2O
 
- 
+ !data from pg 307
  axial S1 0.0
        S11 9.10
        S12 63.94
@@ -272,8 +272,7 @@
 [CONTROL]
  title "control rods"
  npin 14
- !stroke 80.3 8030
- stroke 80.3 10000
+  stroke 80.3 10000
 
  cell 1 0.49037 / CDG !bottom of rod is same material as cladding--table 3.6-1 (pg 306)
  cell 2 0.416 0.42873 0.49037 / CRA air CDG
@@ -350,7 +349,7 @@
        C21 1.67
        C22 80.3
 
-
+!data from pg 56
 [STATE]
  sym   full
  power 100.0

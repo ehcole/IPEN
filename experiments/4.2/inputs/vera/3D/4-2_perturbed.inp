@@ -1,3 +1,4 @@
+!all data from same source as critical input 
 [CORE]
   include materials-2.ini
   size 4
