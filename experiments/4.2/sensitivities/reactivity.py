@@ -2,10 +2,10 @@ import h5py
 import numpy as np
 import sys
 
-#TODO: replace with path to h5 files. p should be 2D cases with control rods out and f with rods in, both with fine mesh
+
 for i in range(1, 4):
-    p = h5py.File("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/version4/boron/IPEN-020/4-2-" + str(i) + ".h5", 'r')
-    f = h5py.File("/scratch/wrm_fluxoe/ehcole/IPEN_Analysis/version4/boron/IPEN-019/4-2-" + str(i) + ".h5", 'r')
+    p = h5py.File("../outputs/2D/out/4-2-" + str(i) + ".h5", 'r')
+    f = h5py.File("../outputs/2D/in/4-2-" + str(i) + ".h5", 'r')
     expData = np.array([2438.05, 2311.40, 2195.85, 1975.38, 1449.33, 222.16])
     results = np.zeros(expData.shape)
     boronConc = np.array([0.082, 6.067, 11.028, 21.98, 43.23, 95.742])
