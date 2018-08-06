@@ -26,7 +26,8 @@ for line in fileinput.input(os.listdir(path), inplace = 1):
   if "pathToTopLevel" in line:
     print(line.split("=")[0] + " '" + path[:-16] + "'")
     #print(line.replace("\'.\'", "'" + path[:-16] + "'"))
-
+  else:
+    print(line)
 
 
 os.system("mv " + path[:-16] + "/experimental_data " + path) 
