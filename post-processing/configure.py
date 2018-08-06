@@ -23,8 +23,9 @@ os.system("mv " + path + "/experimental_data " + path[:-16])
 # redirects STDOUT to the file in question
 
 for line in fileinput.input(os.listdir(path), inplace = 1):
-
-    print(line.replace("\'.\'", "'" + path[:-16] + "'"))
+  if "pathToTopLevel" in line:
+    print(line.split("=")[0] + " '" + path[:-16] + "'")
+    #print(line.replace("\'.\'", "'" + path[:-16] + "'"))
 
 
 
